@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+EMPOWERING THE NATIONS
+Project Overview
+This mobile application was developed for a local small-to-medium enterprise (SME) initiative founded by Precious Radebe, whose goal is to empower members of her community through skills development and vocational training.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The SME offers practical courses designed to upskill domestic workers and gardeners, helping them become more employable and better compensated for their work. By gaining additional skills, trainees are also equipped to start their own small businesses, promoting entrepreneurship and self-sustainability within local communities.
 
-## Get started
+The Empowering the Nation mobile app supports this vision by providing a digital platform through which:
 
-1. Install dependencies
+Potential learners and employers can explore available training courses,
 
-   ```bash
-   npm install
-   ```
+Users can receive quotations for selected services or training packages, and
 
-2. Start the app
+The enterprise can promote its offerings to a broader audience beyond the immediate community.
 
-   ```bash
-   npx expo start
-   ```
+This project demonstrates how mobile technology can be applied to address socioeconomic challenges by bridging the gap between education, employment, and digital accessibility.
 
-In the output, you'll find options to open the app in a
+Features.
+User Authentication
+Allows users to register and log in securely.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Input validation ensures accuracy and prevents incorrect credentials.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+Displays each course with its duration and cost (R750 or R1500).
+the quotation is generated, allowing flexibility in course choice.
 
-When you're ready, run:
+Quotation Generator
+Automatically calculates the total cost, discount, and VAT (15%).
 
-```bash
-npm run reset-project
-```
+Discount Rules:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1 course → 0%
 
-## Learn more
+2 courses → 5%
 
-To learn more about developing your project with Expo, look at the following resources:
+3 or more → 10%
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Displays a detailed quotation summary with all cost components clearly shown.
 
-## Join the community
+Interactive Map Integration
+Integrates Google Maps to show the physical location of the training center.
 
-Join our community of developers creating universal apps.
+Provides navigation assistance and directions for learners.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Enquiry Form
+A built-in contact form that allows users to submit queries or information requests.
+
+Supports better communication between potential learners and the institution.
+
+
+Navigation System
+Provides an intuitive and user-friendly navigation flow between all pages (Login, Home, Courses, Quotation, and About Us).
+
+Implements buttons and intents for smooth transitions between activities.
+
+Ensures users can easily return to previous screens or move forward without confusion. 
+
+## Responsive and Accessible User Interface
