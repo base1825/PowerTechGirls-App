@@ -1,4 +1,4 @@
-EMPOWERING THE NATIONS
+# EMPOWERING THE NATIONS
 Project Overview
 This mobile application was developed for a local small-to-medium enterprise (SME) initiative founded by Precious Radebe, whose goal is to empower members of her community through skills development and vocational training.
 
@@ -14,7 +14,7 @@ The enterprise can promote its offerings to a broader audience beyond the immedi
 
 This project demonstrates how mobile technology can be applied to address socioeconomic challenges by bridging the gap between education, employment, and digital accessibility.
 
-Features.
+## Features.
 User Authentication
 Allows users to register and log in securely.
 
@@ -27,7 +27,7 @@ the quotation is generated, allowing flexibility in course choice.
 Quotation Generator
 Automatically calculates the total cost, discount, and VAT (15%).
 
-Discount Rules:
+-Discount Rules:
 
 1 course → 0%
 
@@ -42,13 +42,13 @@ Integrates Google Maps to show the physical location of the training center.
 
 Provides navigation assistance and directions for learners.
 
-Enquiry Form
+-Enquiry Form
 A built-in contact form that allows users to submit queries or information requests.
 
 Supports better communication between potential learners and the institution.
 
 
-Navigation System
+-Navigation System
 Provides an intuitive and user-friendly navigation flow between all pages (Login, Home, Courses, Quotation, and About Us).
 
 Implements buttons and intents for smooth transitions between activities.
@@ -56,3 +56,19 @@ Implements buttons and intents for smooth transitions between activities.
 Ensures users can easily return to previous screens or move forward without confusion. 
 
 ## Responsive and Accessible User Interface
+
+## GROUP MEMBERS
+-LAICAH BANDA [ST10493996] [BASE IRENE MUDIMBI] [ST10487874] [KGANYA MASHEGAOANA] [ST10480736]
+
+## Design CONSIDERATIONS
+The visual design of the PowerTechGirls application follows a modern and professional aesthetic that reflects empowerment, growth, and excellence. The chosen color palette includes black, green, gold, and white, each selected with purpose:
+
+Black represents strength, professionalism, and stability, creating a strong visual foundation.
+
+Green symbolizes growth, learning, and renewal—values that align with the training and upskilling mission of the project.
+
+Gold conveys achievement, success, and quality, reinforcing the organization’s vision of empowerment through education.
+
+White ensures clarity and readability, balancing the darker tones and maintaining a clean interface.
+
+The user interface was designed to be accessible, simple to navigate, and visually consistent across all screens. The layout uses adequate spacing, legible typography, and well-defined button elements to enhance the user experience on various Android devices.
