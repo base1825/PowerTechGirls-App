@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { Button, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Register() {
   const router = useRouter();
@@ -9,51 +9,87 @@ export default function Register() {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Placeholder for registration logic
     console.log('Register pressed', name, email, password);
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
+      {/* Logo */}
+      <Image
+        source={require('../assets/images/logo.jpg')}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+
+      {/* Titles */}
       <Text style={styles.title}>Empowering the Nation</Text>
       <Text style={styles.subtitle}>Register</Text>
 
+      {/* Form Fields */}
       <Text>Name:</Text>
-      <TextInput 
-        style={styles.input} 
-        placeholder="Enter your name" 
-        value={name} 
-        onChangeText={setName} 
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your name"
+        value={name}
+        onChangeText={setName}
       />
 
       <Text>Email:</Text>
-      <TextInput 
-        style={styles.input} 
-        placeholder="Enter your email" 
-        value={email} 
-        onChangeText={setEmail} 
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your email"
+        value={email}
+        onChangeText={setEmail}
       />
 
       <Text>Password:</Text>
-      <TextInput 
-        style={styles.input} 
-        placeholder="Enter your password" 
-        secureTextEntry 
-        value={password} 
-        onChangeText={setPassword} 
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your password"
+        secureTextEntry
+        value={password}
+        onChangeText={setPassword}
       />
 
+      {/* Buttons */}
       <Button title="Register" onPress={handleRegister} />
       <View style={{ marginTop: 10 }}>
-        <Button title=" Welcome" onPress={() => router.push('/home')} />
+        <Button title="Go to Home" onPress={() => router.push('/home')} />
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 20 },
-  subtitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 10 },
-  input: { borderWidth: 1, borderColor: '#ccc', padding: 10, marginBottom: 15, borderRadius: 5 }
+  container: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  input: {
+    width: '80%',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginBottom: 15,
+    borderRadius: 8,
+  },
 });

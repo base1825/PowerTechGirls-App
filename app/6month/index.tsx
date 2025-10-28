@@ -18,17 +18,36 @@ export default function Home() {
       {/* Titre principal */}
       <Text style={styles.title}>Empowering the Nation</Text>
 
-      {/* Boutons principaux */}
+      {/* Boutons p */}
+      {/* Boutons des cours */}
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.mainButton} onPress={() => router.push('/6month')}>
-          <Text style={styles.buttonText}>6 Months Courses</Text>
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() => router.push('/6month/first-aid')}
+        >
+          <Text style={styles.boxText}>First-Aid</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.mainButton} onPress={() => router.push('/6week')}>
-          <Text style={styles.buttonText}>6 Weeks Courses</Text>
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() => router.push('/6month/landscaping')}
+        >
+          <Text style={styles.boxText}>landscaping</Text>
         </TouchableOpacity>
 
-        
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() => router.push('/6month/life-skills')}
+        >
+          <Text style={styles.boxText}>Life-Skills</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() => router.push('/6month/sewing')}
+        >
+          <Text style={styles.boxText}>Sewing</Text>
+        </TouchableOpacity>
       </View>
 
       {/* icones */}
@@ -37,6 +56,15 @@ export default function Home() {
           <Ionicons name="call" size={28} color="#4CAF50" />
           <Text style={styles.iconLabel}>Contact</Text>
         </TouchableOpacity>
+
+         <TouchableOpacity
+                  style={styles.backButton}
+                  onPress={() => router.push('/home')}
+                >
+                  <Text style={styles.backButtonText}>Back to Home</Text>
+                </TouchableOpacity>
+
+         
 
         <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/enquiry')}>
           <Ionicons name="chatbubbles" size={28} color="#4CAF50" />
@@ -71,6 +99,24 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     alignItems: 'center',
     width: '100%',
+  },
+  box: {
+    width: '85%',
+    backgroundColor: '#4CAF50',
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginVertical: 8,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  boxText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600',
   },
   mainButton: {
     width: '85%',
@@ -118,12 +164,23 @@ const styles = StyleSheet.create({
   iconButton: {
     alignItems: 'center',
   },
+  backButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#E0E0E0',
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    marginHorizontal: 8,
+  },
+  backButtonText: {
+    color: '#333',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
   iconLabel: {
     fontSize: 13,
     color: '#333',
     marginTop: 4,
   },
 });
-
-
-

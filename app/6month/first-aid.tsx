@@ -3,114 +3,151 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-
-export default function Home() {
+export default function FirstAid(){
   const router = useRouter();
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* Logo */}
-      <Image 
-        source={require('../../assets/images/logo.jpg')} 
-        style={styles.logo} 
-        resizeMode="contain"
-      />
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        {/* Logo */}
+        <Image 
+          source={require('../../assets/images/logo.jpg')} // 
+          style={styles.logo}
+          resizeMode="contain"
+        />
 
-      {/* Titre */}
-      <Text style={styles.title}>Empowering the Nation</Text>
+        {/* Titre principal */}
+        <Text style={styles.title}>Empowering the Nation</Text>
 
-      {/* Boutons principaux */}
-      <TouchableOpacity style={styles.boxButton} onPress={() => router.push('/6month')}>
-        <Text style={styles.buttonText}>6 Months Courses</Text>
-      </TouchableOpacity>
+        {/* Titre du cours */}
+        <Text style={styles.courseTitle}>first aid </Text>
 
-      <TouchableOpacity style={styles.boxButton} onPress={() => router.push('/6week')}>
-        <Text style={styles.buttonText}>6 Weeks Courses</Text>
-      </TouchableOpacity>
+        {/* Détails du cours */}
+        <Text style={styles.text}>Fees: R1500</Text>
+        <Text style={styles.text}>Purpose: To provide provide first aid awareness and basic life support.</Text>
 
-      {/* Petit bouton vers Quotation */}
-      <TouchableOpacity style={styles.smallButton} onPress={() => router.push('/quatation')}>
-        <Text style={styles.smallButtonText}>Go to Quotation</Text>
-      </TouchableOpacity>
+        <Text style={styles.subTitle}>Content:</Text>
+        <Text style={styles.list}>• birth to six-month old baby needs</Text>
+        <Text style={styles.list}>• seven-month to one year old needs</Text>
+        <Text style={styles.list}>• toddler needs</Text>
+        <Text style={styles.list}>• Educational teys</Text>
 
-      {/* Icônes du bas */}
-      <View style={styles.bottomIcons}>
+        {/* Bouton retour */}
+        <TouchableOpacity style={styles.backButton} onPress={() => router.push('/6month')}>
+          <Text style={styles.backButtonText}>Back</Text>
+        </TouchableOpacity>
+
+        {/* Petit bouton vers Quotation */}
+        <TouchableOpacity style={styles.smallButton} onPress={() => router.push('/quatation')}>
+          <Text style={styles.smallButtonText}>Go to Quotation</Text>
+        </TouchableOpacity>
+      </ScrollView>
+
+      {/* Barre d’icônes fixe en bas */}
+      <View style={styles.bottomBar}>
         <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/contact')}>
-          <Ionicons name="call" size={30} color="#4CAF50" />
-          <Text style={styles.iconText}>Contact</Text>
+          <Ionicons name="call" size={26} color="#4CAF50" />
+          <Text style={styles.iconLabel}>Contact</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/enquiry')}>
-          <Ionicons name="chatbubbles" size={30} color="#4CAF50" />
-          <Text style={styles.iconText}>Enquiry</Text>
+          <Ionicons name="chatbubbles" size={26} color="#4CAF50" />
+          <Text style={styles.iconLabel}>Enquiry</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  scrollContainer: {
     alignItems: 'center',
     padding: 20,
+    paddingBottom: 120, // pour éviter que le contenu soit caché par la barre du bas
   },
   logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
+    width: 120,
+    height: 120,
+    marginTop: 20,
   },
   title: {
-    fontSize: 36,
+    fontSize: 32,
     fontWeight: 'bold',
-    marginBottom: 40,
+    color: '#2E7D32',
+    marginVertical: 20,
     textAlign: 'center',
-    color: '#333',
   },
-  boxButton: {
-    width: '80%',
-    backgroundColor: '#4CAF50',
-    padding: 20,
-    borderRadius: 12,
-    marginVertical: 10,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 3 },
-    shadowRadius: 5,
-    elevation: 3,
-  },
-  buttonText: {
-    color: '#fff',
+  courseTitle: {
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 15,
+  },
+  text: {
+    fontSize: 16,
+    textAlign: 'left',
+    marginVertical: 5,
+    lineHeight: 22,
+    width: '95%',
+  },
+  subTitle: {
     fontSize: 18,
+    fontWeight: '600',
+    marginTop: 20,
+    marginBottom: 8,
+    width: '95%',
+  },
+  list: {
+    fontSize: 16,
+    marginVertical: 2,
+    width: '95%',
+  },
+  backButton: {
+    backgroundColor: '#4CAF50',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    marginTop: 30,
+  },
+  backButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   smallButton: {
-    marginTop: 20,
+    marginTop: 15,
     backgroundColor: '#2196F3',
     paddingVertical: 10,
     paddingHorizontal: 25,
     borderRadius: 8,
-    elevation: 2,
   },
   smallButtonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '600',
   },
-  bottomIcons: {
+  bottomBar: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#f8f8f8',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '80%',
-    marginTop: 50,
+    paddingVertical: 15,
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
   },
   iconButton: {
     alignItems: 'center',
   },
-  iconText: {
-    marginTop: 5,
-    fontSize: 14,
+  iconLabel: {
+    fontSize: 13,
     color: '#333',
+    marginTop: 4,
   },
 });

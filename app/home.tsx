@@ -27,6 +27,10 @@ export default function Home() {
         <Text style={styles.buttonText}>6 Weeks Courses</Text>
       </TouchableOpacity>
 
+        <TouchableOpacity style={styles.backButton} onPress={() => router.push('/')}>
+                 <Text style={styles.backButtonText}>Back</Text>
+               </TouchableOpacity>
+
       {/* Bottom Icons */}
       <View style={styles.bottomIcons}>
         <TouchableOpacity style={styles.iconButton} onPress={() => router.push('/contact')}>
@@ -47,6 +51,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     justifyContent: 'center',
+     backgroundColor: '#fff',
     alignItems: 'center',
     padding: 20,
   },
@@ -60,7 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 40,
     textAlign: 'center',
-    color: '#333',
+    color: '#12802aff',
   },
   boxButton: {
     width: '80%',
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginVertical: 10,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#80d880ff',
     shadowOpacity: 0.2,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 5,
@@ -79,6 +84,22 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 18,
+  },
+  backButton: {
+    width: '80%',
+    backgroundColor: '#fff',
+    padding: 12,
+    borderRadius: 12,
+    marginVertical: 10,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#4CAF50',
+    elevation: 1,
+  },
+  backButtonText: {
+    color: '#4CAF50',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
   bottomIcons: {
     flexDirection: 'row',
